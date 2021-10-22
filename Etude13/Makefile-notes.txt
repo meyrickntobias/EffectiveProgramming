@@ -1,0 +1,11 @@
+A makefile is a special file, containing shell commands, that 
+you create and name makefile.
+While in the directory containing this makefile, you will type make and 
+the commands in the makefile will be executed. If you create more than one
+makefile, be certain you are in the correct directory before typing make.
+Make keeps track of the last time files were updated and only updates
+those files which are required to keep the source file up to date. 
+If you have a large program with many source and/or header files, when you
+change a file on which others depend, you must recompile all the 
+dependent files. Without a makefile, this is an extremely time-consuming
+task. 

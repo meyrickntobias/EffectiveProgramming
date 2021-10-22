@@ -1,0 +1,145 @@
+C Programming Language basics
+
+Basics:
+At the top of any C program, we have our include statements.
+Every C program requires a main method. 
+We return 0, because that signals the program ran correctly.
+All instructions should be ended with a semi-colon.
+You can use a backslash n or a backslash t for newline and tabs.
+The printf method takes a string of characters and prints it out to the
+terminal.
+
+Variables and data types
+When declaring a variable, declare the data type and then
+the name of the variable. A variable is a container. 
+If we want to store multiple characters, we would create a character
+array. The two most important types of number types are integers and
+double (also floats).
+
+Working with numbers 
+Any operation between an integer and a floating point number
+is going to give you a floating point number in return. 
+Dividing two integers will give you an integer version back (even
+if you cast to double/float).
+
+Functions
+pow(base, raised) - e.g: pow(5, 2) = 25
+sqrt(num) - e.g: sqrt(36) = 6
+floor() - round number down
+ceil() - round the number up
+
+Comments - use /* */ or double slashes 
+Constants - special type of variable that cannot be modified, e.g:
+    const int NUM = 5;
+
+Strings
+We need to specify the length of a character array if it the variable
+is not initially assigned.
+
+Getting user input
+Scanf is used to get user input generally, with %lg being
+used for doubles instead of %d like in printf.
+When using scanf() for strings, it will finish after a space
+which means we should probably use fgets() instead, e.g:
+    fgets(name, 20, stdin);
+
+Arrays
+Arrays must have a uniform data type. 
+int nums[] = {3, 7, 2};
+double dbs[] = {3.2, 5.5, 9.0};
+char str[] = "ABC";
+To access an element - nums[1] (starting from index zero)
+
+Memory addresses and pointers
+To print out memory addresses, use %p inside the first printf parameter.
+We often want to know what the exact address is - &var. 
+A pointer is a data type that's a memory address.
+We can store pointers using an asterisk.
+
+int age = 21;
+int* pAge = &age;
+
+Deferencing pointers 
+When we dereference a pointer, we go to that memory address and get the value stored at 
+that memory address. Use an asterisk to deference a pointer. 
+
+Writing files
+a = append
+r = read
+w = write 
+
+Start by creating a pointer to our file.
+To write information to a file, use fprintf - fprint(fpointer, "Hello, World");
+Use fclose() to close the file.
+
+To read information from a file, use fgets(line, characters, fpointer)
+    where line is th evariable to copy into, characters in the number of characters 
+    and fpointer is the pointer to the file
+
+
+Memory Allocation using malloc, calloc, free, and realloc
+The malloc method in C is used to dynamically allocate a single large 
+block of memory with the specified size. It returns a pointer of type void which
+can be cast into a pointer of any form. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Let's say I wanted to create a program in C, where I open a text file
+with a bunch of voters preferences and I want to tally up the votes and give
+votes to different candidates
+
+Algorithm:
+initialise list of candidates
+read in lines of votes, for each line:
+    for each candidate
+        if candidate exists in candidate list, give them a vote
+        else - add new candidate with name specified
+sort the candidate list
+print out each candidate and their votes and declare the winner
+
+
+Candidate struct
+    name, votes
+
+Function that takes a candidate and returns their votes
+Function that takes a candidate and increments their votes 
+Function that prints out name and votes like so: Labour     ->      37
+Create a list structure where we can sort the candidate structs by their votes 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

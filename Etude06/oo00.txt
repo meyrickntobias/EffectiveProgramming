@@ -1,0 +1,21 @@
+Round 1
+Jqzockmu    4
+Odgvd       3
+Zerqi       2
+Ttpzbnxwz   1
+Eliminated: Ttpzbnxwz
+
+Round 2
+Jqzockmu    4
+Odgvd       4
+Zerqi       2
+Eliminated: Zerqi
+
+Round 3
+Jqzockmu    5
+Odgvd       5
+Eliminated: Odgvd
+
+Round 4
+Jqzockmu    8
+Winner: Jqzockmu

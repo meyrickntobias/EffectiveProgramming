@@ -1,0 +1,70 @@
+Given a grid of individuals, each of which is either immune, sick or non-sick non-immune, return the final state of the grid/universe, considering
+    that if two of the four immediate neighbours of any given individual become sick, then that individual becomes sick
+
+
+. . . S 
+I . . .     
+S S . .
+S . . .
+
+  ==
+
+. . . S 
+I . . .
+S S . .
+S S . .
+
+  ==
+
+. . . S 
+I . . .
+S S . .
+S S . .
+(final)
+
+
+Keep track of:
+ - Grid/universe - 2D structure containing individuals that are either sick, immmune or non-sick/non-immune
+ - Last grid/universe - if the last grid is no different than this grid, this is the final grid
+ 
+How to solve this problem?
+Perhaps a 2D array of chars, method that nest loops the 2D chars array and reads the adjacent chars, updates the 2D chars array and checks if 
+it is different, updating until it is the same
+
+Problems:
+    - How do we know the adjacent individuals given any individual?
+        If on first row - only have chars to side and one below
+        If on final row - only have chars above and to side
+        If on first column - only have chars to right side
+        If on second column - only have chars to left side
+
+for each individual:
+    create variables right, left, above and below
+    index[i][j]
+    above = individual[i + 1][j]
+    below = individual[i - 1][j]
+    left = individual[i][j - 1]
+    right = individual[i][j + 1]
+    if colsize = 1 then set right to null and left to null
+    if rowsize = 1 then set above to null and below to null    
+    if row == 1 then set above to null
+    if row == rowsize then set below to null
+    if col == 1 then set left to null 
+    if col == colsize then set right to null 
+    // check above, below, left and right, update counter and then update character, if updated set updated to true
+
+
+matrix = [][]
+
+Given an initial universe u, containing only immune and vulnerable individuals, 
+determine the minimum number of individuals who must initially be made sick
+so that eventually every non-immune individual becomes sick. 
+
+Devise a program where you increment the number of initially sick individuals in any given grid 
+until a state in which everybody becomes sick, record at which number of initially sick individuals,
+everybody becomes sick
+ - Vary the number of immune and non-immune individuals 
+ - 
+
+
+

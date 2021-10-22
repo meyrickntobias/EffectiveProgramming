@@ -1,0 +1,17 @@
+Round 1
+Vcmfr      261
+Ftkje      260
+Pweshgqp   253
+Yfewkc     226
+Eliminated: Yfewkc
+
+Round 2
+Ftkje      317
+Pweshgqp   312
+Vcmfr      308
+Eliminated: Vcmfr
+
+Round 3
+Pweshgqp   420
+Ftkje      415
+Winner: Pweshgqp

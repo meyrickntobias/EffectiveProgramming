@@ -1,0 +1,36 @@
+Matplotlib is one of the most popular graphing
+and data visualization libraries for Python.
+
+In order to create a graph, use the following
+steps:
+    - Define the x-axis and corresponding 
+    y-axis values as lists.
+    - Plot them on canvas using .plot() 
+    function.
+    - Give a name to x-axis and y-axis using
+    .xlabel() and .ylabel() functions.
+    - Give a title to your plot using .title() 
+    function.
+    - Finally, to view your plot, we use .show() 
+    function.
+
+In order to plot another line, we can simply make
+another call to .plot() with more x and y values
+in the form of a Python list.
+
+You can set the x and y axis range using plt.xlim()
+and plt.ylim() functions. 
+
+You can plot the points with a customized colour, 
+different styles of lines, a customized width, 
+and more.
+
+In order to make a scatter plot, we would 
+use plt.scatter(x, y, label="", color="")
+
+plt.xlabel('x - axis')
+plt.ylabel('y - axis')
+plt.title('My scatter plot!')
+plt.legend()
+
+plt.show()

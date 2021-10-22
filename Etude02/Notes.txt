@@ -1,0 +1,47 @@
+Fixing the games
+
+P players play a game, but only p-1 can play in any given round.
+They just play p rounds with one player sitting out each around.
+The results capture who came 1st, 2nd and 3rd.
+The record keeper however forgot to include underscores for the player
+	that sat out, so the results are collapsed.
+Our aim is to take input as the results and figure out using logic,
+	who sat out game -> recovering the original results and spitting them out.
+	
+
+Example with p=4:
+
+1	2	_	3
+2	_	1	3
+3	2	1	_
+_	2	3	1
+
+Collapses to:
+1	2	1	3
+2	2	1	3
+3	2	3	1
+
+
+How would you recover the results?
+If two players have the same score, contradiction
+First result -> two players won, so either first player wins
+	or third player wins
+If first player wins, then analyse second result -> player 3 no
+	involved in contradiction
+
+Follow the possible results all the way down to end result,
+if there is a contradiction, dismiss that game state, otherwise
+add it to a list of possible original results.
+
+Task:
+	Construct all the possible results consistent with a given collapsed
+		version.
+	Count how many essentially different ones there are (two sets of results
+		that differ only in the order that the games are played are considered
+		the same)
+
+Functions needed:
+ - Check for bad format
+ - Check for bad values
+ - Construct 2D array of integers
+ - Recursive method for generating possible outcomes

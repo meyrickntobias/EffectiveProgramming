@@ -1,0 +1,35 @@
+Writing a program that takes as input a list of voters preferences (lines of text, candidates separated by a space),
+determines who wins each round, who gets eliminated and who wins using a single transferable vote system (STV), written
+in Java.
+
+Keep track of each voter, their votes in order and which vote is currently being counted, if they are inactive or active
+Keep track of each candidate, how many votes they have in each round, if they are active/inactive (inactive means they have been voted out)
+
+Algorithm:
+Read input  
+    while next line exists
+        voter v = new voter
+        preference = 1
+        while next string exists
+            string vote = next string
+            if !candidate.exists(vote) then candidate.new(vote)
+            if preference == 1
+                candidate.incrementVote(1)      // increment the vote in the first round for said candidate
+            v.add(vote, preference)
+            preference++
+        voters.add(v)
+round = 1
+sort candidates by votes in the given round
+print votes for round 1
+total votes = get total votes 
+while there is no winner
+    if there is no tie 
+        loser = candidate with least amount of votes 
+        // eliminate candidate and transfer relevant voters
+        for each voter v who voted for loser 
+            if v.hasNextVote
+                increment votes for candidate with name == v.nextVote
+            else
+                make v inactive voter 
+        
+

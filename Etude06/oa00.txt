@@ -1,0 +1,29 @@
+Round 1
+B    5
+A    4
+C    4
+D    2
+E    1
+Eliminated: E
+
+Round 2
+A    5
+B    5
+C    4
+D    2
+Eliminated: D
+
+Round 3
+A    7
+B    5
+C    4
+Eliminated: C
+
+Round 4
+A    8
+B    8
+Eliminated: B
+
+Round 5
+A    8
+Winner: A

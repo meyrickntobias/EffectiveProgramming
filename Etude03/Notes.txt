@@ -1,0 +1,36 @@
+Finding Anagrams Etude
+----------------------------------------
+
+Ignoring capitalisation, punctuation and whitespace, find anagrams of a String.
+
+Given a dictionary and a string you're going to be asked to find the "best"
+anagram for the string from words in the dictionary. The definition of "better" in 
+this context:
+ - Longer words used earlier are better than ones using shorter words.
+ - If two anagrams start with a word of the same length, then the one where that word
+ is earlier in alphabetical order is better. If they start with the same word, you compare
+ first the lengths of the second word, or again by alphabetical order.
+ 
+For given string -> 
+	Scan dictionary looking for words that fit into given string, add to list of words
+	For each possible combination of words ->
+		Test if that combination is an anagram and if so, add to an anagram list
+		Sort anagrams according to conditions provided
+	Print out all anagrams of given string, or just colon and space
+	
+
+First job:
+Handle input -> put all words from first group into 'candidates',
+	second group into 'dictionary'
+
+Choice of data structures:
+Candidates can go into some type of list data structure, and dictionary should be
+ordered as well, so maybe also a list?
+
+Methods needed:
+ - Method for finding all words in dictionary that match a given string
+ - Method for finding all possible combination of words that fit within a string 
+ - Method for comparing anagrams by conditions provided
+ - Method for printing out all output (or print output as you go?)
+ 
+ 

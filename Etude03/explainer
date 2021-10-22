@@ -1,0 +1,28 @@
+The way the program works is like this:
+
+Looking for an anagram for string s, given dictionary d,
+create a subset of dictionary d containing words smaller
+than string s, for each word w in dictionary d, if the 
+same letters are contained within w as are in s (all
+letters that are in w are in, not necessarily the other
+way round), push that string to the stack and repeat 
+but starting from word w this time instead of an empty
+string, for all words i such that length of words w and 
+i are less than length of string s, do the same and 
+keep adding to the stack, testing each subsequent string,
+breaking out when the anagram is found or the stack is
+empty
+
+Pseudo-code 
+s = target string
+initiate stack
+add empty string to stack
+while stack not empty and anagram not found:
+    starting point = stack.pop 
+    if starting point = anagram of string s 
+        anagram found
+    create subset of words that exist such that len(w) + len(s) < len(starting point)
+    if size(subset) == 0
+        continue
+    for all words w in subset
+        stack.push(starting point + w)

@@ -1,0 +1,37 @@
+Etude #08 - Woof
+
+Rule #1 - <woof> = p | q | r | s 
+Rules #2 - <woof> = N <woof>
+Rule #3 - <woof> = <leader> <woof> <woof>
+Rule #4 - <leader> = C | A | K | E 
+
+Examples:
+
+NEqs
+
+
+Algorithm:
+
+Given string str and test whether it is a woof:
+    String initial = "pq"
+    boolean test = recursiveWoof(initial)
+
+    boolean recursiveWoof(String str)
+        if (str == *) return true
+        String copy = "pq"
+        Loop through str, index i:
+            if str[i] satisifies rule #1 - convert to *
+            if str[i] satisifies rule #4 - convert to %
+        Loop through str, index i:
+            if str[i] == *:
+                if str[i-1] == N:
+                    remove str[i-1]
+            if str[i] == %:
+                if str[i+1] and str[i+2] == *:
+                    remove str[i] and str[i+1]
+        if copy == str:
+            return false
+        else:
+            recursiveWoof(copy)
+
+
